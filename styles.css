@@ -1,0 +1,78 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background: #f7f7f7; 
+    
+}
+
+
+.about-section {
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* for fade in on refresh */
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
+.about-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 40px;
+}
+
+.about-text {
+    max-width: 400px;
+}
+
+.down-arrow {
+    width: 30px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+/* turn down arrow opactiy to 1 on hover w/ cursor */
+.down-arrow:hover {
+    opacity: 1;
+}
+
+
+.menu-section {
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-item {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+.menu-item:hover {
+    opacity: 1;
+}
+
+/* Mobile */
+/* no hover animation, just click + all vertical */
