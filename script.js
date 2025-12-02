@@ -3,15 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const arrow = document.getElementById("downArrow");
     const menu = document.getElementById("menu");
 
-    window.scrollTo(0, 0);
-
-    window.addEventListener("load", () => {
-        // on load, fade in about section again and fade to top of screen
-        setTimeout(() => {
-            about.style.opacity = 1;
-        }, 50);
-        
-    });
+    setTimeout(() => {
+        window.scrollTo(0, 0); // scroll to top
+        about.style.opacity = 1; // fade in About Me
+        // remove any hash from URL
+        if (window.location.hash) {
+            history.replaceState(null, null, " ");
+        }
+    }, 50); 
 
     // scroll to menu section when arrow's clicked
     arrow.addEventListener("click", () => {
